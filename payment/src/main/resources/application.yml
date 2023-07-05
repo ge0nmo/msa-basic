@@ -1,0 +1,26 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2
+    url: jdbc:h2:tcp://localhost/~/payment
+    username: sa
+    password: 123
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  sql:
+    init:
+      data-locations: classpath*:db/h2/data.sql
+logging:
+  level:
+    org:
+      springframework:
+        orm:
+          jpa: DEBUG
+server:
+  port: 9091
