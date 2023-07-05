@@ -18,5 +18,7 @@ public class Payment
 
     private String transactionId;
 
+    private Long orderId;
 
+    private int quantity;
 }
