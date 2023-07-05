@@ -1,5 +1,8 @@
 package com.orderservice.controller;
 
+import com.orderservice.dto.Payment;
+import com.orderservice.dto.TransactionRequest;
+import com.orderservice.dto.TransactionResponse;
 import com.orderservice.entity.Order;
 import com.orderservice.service.OrderService;
 import lombok.RequiredArgsConstructor;
@@ -17,8 +20,11 @@ public class OrderController
     private final OrderService orderService;
 
     @PostMapping("/save")
-    public Order bookOrder(@RequestBody Order order)
+    public TransactionResponse bookOrder(@RequestBody TransactionRequest request)
     {
-        return orderService.saveOrder(order);
+
+        orderService.saveOrder(request);
+
+        return orderService.saveOrder(request);
     }
 }
