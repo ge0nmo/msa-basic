@@ -4,7 +4,7 @@ spring:
       enabled: true
       path: /h2
   datasource:
-    url: jdbc:h2:tcp://localhost/~/order
+    url: jdbc:h2:tcp://localhost/~/payment
     username: sa
     password: 123
   jpa:
@@ -24,4 +24,4 @@ logging:
         orm:
           jpa: DEBUG
 server:
-  port: 9091
+  port: 9090
